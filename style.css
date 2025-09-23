@@ -33,17 +33,17 @@ section {
 }
 
 .logo {
-    text-align: center;
-    width: auto;
-    padding: 10px;
-    border-radius: 10px;
+    display: flex;
+    justify-content: center; /* centraliza na horizontal */
+    align-items: center;     /* centraliza na vertical */
     margin-bottom: 20px;
-    
-    
-    
 }
 .logo img {
+    display: block;  /* transforma a imagem em bloco */
     width: 400px;
+    margin: 0 auto;    /* centraliza horizontalmente */
+    object-fit: contain;
+    
 }
 .botoes {
     text-align: center;
