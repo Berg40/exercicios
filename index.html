@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Treinos</h1>
+    </header>
+
+    <section>
+        <div>
+            
+            <p><button onclick="mostrarExercicio(`ombro`)">Ombros</button>
+            <button onclick="mostrarExercicio(`costas`)">Costas</button>
+            <button onclick="mostrarExercicio(`peito`)">Peito</button></p>
+            
+        </div>
+
+        <div id="galeria"></div>
+
+<!-- Modal escondido -->
+    <div id="modal" class="modal" >
+    
+    <img id="modalImg" style="max-width:90%; max-height:90%; border-radius: 10px;">
+    </div>
+
+    </section>
+
+    <footer>Copyright &copy; Berg Andrade 2025 </footer>
+    <script src="script.js"></script>
+</body>
+</html>
