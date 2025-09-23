@@ -204,11 +204,15 @@ function mostrarExercicio(grupo) {
             img.style.width = "150px";
             img.style.margin = "10px";
             img.style.cursor = "pointer";
+            img.style.borderRadius = "10px"
 
             // Abre no modal
             img.addEventListener("click", () => {
                 modal.style.display = "flex";
+                
                 modalImg.src = src;
+                
+                
             });
 
             galeria.appendChild(img);
@@ -220,3 +224,13 @@ function mostrarExercicio(grupo) {
         modal.style.display = "none";
     });
 }
+
+const botoes = document.querySelectorAll(".botoes"); /* Seleciona todos os botões */
+botoes.forEach(botao => {
+    botao.addEventListener("click", () => {
+        // Remove a classe 'ativo' de todos os botões
+        botoes.forEach(b => b.classList.remove("ativo"));
+        // Adiciona a classe 'ativo' ao botão clicado
+        botao.classList.add("ativo");
+    });
+});
