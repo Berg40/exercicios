@@ -202,7 +202,7 @@ function mostrarExercicio(grupo) {
             img.src = src;
             img.alt = grupo;
             img.style.width = "150px";
-            img.style.margin = "28px";
+            img.style.margin = "10px";
             img.style.cursor = "pointer";
 
             // Abre no modal
