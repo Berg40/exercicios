@@ -8,25 +8,31 @@
 </head>
 <body>
     <header>
-        <h1>Treinos</h1>
+        <h1>EXERCÍCIOS</h1>
     </header>
 
     <section>
-        <div>
+        <div class="botoes">
             
-            <p><button onclick="mostrarExercicio(`ombro`)">Ombros</button>
+            <p>
+            <button onclick="mostrarExercicio(`inferiores`)">Inferiores</button>
             <button onclick="mostrarExercicio(`costas`)">Costas</button>
-            <button onclick="mostrarExercicio(`peito`)">Peito</button></p>
-            
+            <button onclick="mostrarExercicio(`peito`)">Peito</button>
+            <button onclick="mostrarExercicio(`triceps`)">Tríceps</button>
+            <button onclick="mostrarExercicio(`ombro`)">Ombros</button>
+            <button onclick="mostrarExercicio(`biceps`)">Bíceps</button>
+        </p>
         </div>
 
-        <div id="galeria"></div>
+        <div class="galeria" id="galeria"></div>
 
 <!-- Modal escondido -->
     <div id="modal" class="modal" >
     
     <img id="modalImg" style="max-width:90%; max-height:90%; border-radius: 10px;">
+    
     </div>
+    <img class="logo" src="img/logo.png">
 
     </section>
 

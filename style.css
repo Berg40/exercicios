@@ -1,24 +1,28 @@
 body {
-    background: #333333c9;
+    background: #0c0000c9;
 }
 
 header {
     text-align: center;
-    color: rgb(247, 241, 232);
+    color: whitesmoke;
+    font-style: italic;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 section {
-    background: #9ba8e49a;
+    background: #0412509a;
     width: 90%;
     height: auto;
     margin: auto;
     padding: 20px;
     padding-left: 10px;
     border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .modal {
     display:none;
+    
     position:fixed;
     top:0; left:0; 
     width:100%; height:100%;
@@ -28,6 +32,27 @@ section {
     
 }
 
+.logo {
+    width: 400px;
+    margin: auto;
+    display: block;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    
+    
+    
+}
+.botoes {
+    text-align: center;
+    padding: 10px;
+    
+}
+
+.galeria {
+    text-align: center;
+}
+
 
 
 
@@ -35,4 +60,5 @@ section {
 footer {
     text-align: center;
     padding: 10px;
+    color: whitesmoke;
 }
