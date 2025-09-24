@@ -23,6 +23,16 @@ h1 {
     font-size: 40px;
     margin: 0;
     padding: 10px;
+    
+
+}
+
+.titulo {
+    
+    background: linear-gradient(240deg,  #1b37b69c 40%, #b30b0be0 40%,  #1b37b69c 40%, #b30b0be0 80%); /* Gradiente diagonal */
+    -webkit-background-clip: text; /* Aplica o gradiente ao texto */
+    color: transparent; /* Torna o texto transparente para mostrar o gradiente */
+    -webkit-text-fill-color: transparent; /* Compatibilidade com outros navegadores */
 }
 
 section {
@@ -120,6 +130,7 @@ footer {
     text-align: center;
     padding: 10px;
     color: whitesmoke;
+    font-size: 8px;
 }
 
 @keyframes pulso {
