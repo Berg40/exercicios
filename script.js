@@ -209,7 +209,7 @@ function mostrarExercicio(grupo) {
             let img = document.createElement("img");
             img.src = src;
             img.alt = grupo;
-            img.style.width = "100px";
+            img.style.width = "130px";
             img.style.margin = "10px";
             img.style.cursor = "pointer";
             img.style.borderRadius = "10px";

@@ -1,7 +1,5 @@
 body {
     background: black;
-    margin: 0px;
-    padding: 0px;
 }
 
 header {
@@ -29,15 +27,15 @@ h1 {
 
 section {
     background: #0412509a;
-    width: 100%;
+    width: 90%;
     height: auto;
-    margin: 0px;
+    margin: auto;
     padding: 20px;
     padding-left: 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
-    background: linear-gradient(260deg,  #1b37b69c 40%, #b30b0be0 40%,  #1b37b69c 40%, #b30b0be0 80%); /* Gradiente diagonal */
+    background: linear-gradient(240deg,  #1b37b69c 40%, #b30b0be0 40%,  #1b37b69c 40%, #b30b0be0 80%); /* Gradiente diagonal */
     clip-path: polygon(0% 100%, 0 0, 100% 60); /* Forma de triângulo */
 
 }
