@@ -1,5 +1,7 @@
 body {
     background: black;
+    margin: 0px;
+    padding: 0px;
 }
 
 header {
@@ -27,9 +29,9 @@ h1 {
 
 section {
     background: #0412509a;
-    width: 90%;
+    width: 100%;
     height: auto;
-    margin: auto;
+    margin: 0px;
     padding: 20px;
     padding-left: 10px;
     border-radius: 10px;
