@@ -1,6 +1,6 @@
 const exercicios = { 
     ombro: [
-        "img/ombro/ARNOLD.gif",
+        "img/ombro/ARNOLD.gif", 
         "img/ombro/ABDUÇÃO DE OMBRO TOTAL.gif",
         "img/ombro/ARTICULADO.gif",
         "img/ombro/CRUCIFIXO INVERSO EM PÉ.gif",
@@ -198,24 +198,49 @@ function mostrarExercicio(grupo) {
 
     if (exercicios[grupo]) {
         exercicios[grupo].forEach(src => {
+            //Cria um container para cada exercicio
+            let container = window.document.createElement("div");
+            container.style.display = "inline-block";
+            container.style.textAlign = "center";
+            container.style.margin = "10px";
+
+
+            //Cria a imagem
             let img = document.createElement("img");
             img.src = src;
             img.alt = grupo;
             img.style.width = "150px";
             img.style.margin = "10px";
             img.style.cursor = "pointer";
-            img.style.borderRadius = "10px"
+            img.style.borderRadius = "10px";
 
-            // Abre no modal
+            // Extrai nome do arquivo (sem pasta e sem .gif)
+            let nome = src.split("/").pop().replace(".gif", "");
+
+            //Cria Legenda
+            let legenda = window.document.createElement("p");
+            legenda.textContent = nome;
+            legenda.style.color = "white";
+            legenda.style.marginTop = "5px";
+            legenda.style.fontSize = "12px";
+            legenda.style.fontFamily = "Arial, sans-serif";
+
+
+
+            // Abre no modal Evento clique
             img.addEventListener("click", () => {
                 modal.style.display = "flex";
-                
+           //   modal.style.backgroundColor = "black"; // Fundo escurecido
                 modalImg.src = src;
                 
                 
             });
 
-            galeria.appendChild(img);
+            //Monta Container
+            container.appendChild(img);
+            container.appendChild(legenda)
+
+            galeria.appendChild(container);
         });
     }
 

@@ -34,6 +34,10 @@ section {
     padding-left: 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    background: linear-gradient(260deg,  #1b37b69c 40%, #b30b0be0 40%,  #1b37b69c 40%, #b30b0be0 80%); /* Gradiente diagonal */
+    clip-path: polygon(0% 100%, 0 0, 100% 60); /* Forma de triângulo */
+
 }
 
 .modal {
@@ -70,6 +74,12 @@ section {
 .botoesContainer {
     text-align: center; /* Centraliza o conteúdo horizontalmente */
     margin-bottom: 20px; /* Espaçamento inferior */
+
+
+
+
+
+
 }
 .botoes {
     

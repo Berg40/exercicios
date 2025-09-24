@@ -3,45 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Treinos</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+    <style>
+        body {
+            
+            text-align: center;
+            background-image: url("img/images\ \(34\).jpeg");
+            background-size: cover;
+            
+            
+
+        }
+
+        
+
+        section {
+            margin-top: 200px;
+            animation-name: login-animacao;
+            animation-duration: 5s;
+            animation-iteration-count: initial;
+
+            
+            
+            
+        }
+        p {
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            font-size: 16px;
+            color: whitesmoke;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            padding-bottom: 10px;
+            color: whitesmoke;
+
+
+            
+            
+        }
+        @keyframes login-animacao {
+            0% {
+                transform: translateY(-230px);
+            }
+            
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+
+
+
+    </style>
 </head>
 <body>
     <header>
-        <h1><img src="img/logo.png" alt="Logo" style="width: 80px;">
-            EXERCÍCIOS
-            <img src="img/logo.png" alt="Logo" style="width: 80px;"></h1>
+        <h1></h1>
     </header>
 
     <section>
-        <div class="botoesContainer" >
-            
-            <p>
-            <button class="botoes"  onclick="mostrarExercicio(`inferiores`)">Inferiores</button>
-            <button class="botoes" onclick="mostrarExercicio(`costas`)">Costas</button>
-            <button class="botoes" onclick="mostrarExercicio(`peito`)">Peito</button>
-            <button class="botoes" onclick="mostrarExercicio(`triceps`)">Tríceps</button>
-            <button class="botoes" onclick="mostrarExercicio(`ombro`)">Ombros</button>
-            <button class="botoes" onclick="mostrarExercicio(`biceps`)">Bíceps</button>
-        </p>
+        <div class="login" id ="login">
+            <p>Senha: <input type="password" id="senha" required style="width: 130px;"> 
+            <button id="buttonLogin" onclick="loginUsuario()">Entrar</button>
+            </p>
         </div>
-
-        <div class="galeria" id="galeria"></div>
-
-<!-- Modal escondido -->
-    <div id="modal" class="modal" >
-    
-    <img id="modalImg" style="max-width:90%; max-height:90%; border-radius: 10px;">
-    
-    </div>
-
-    <div class="logo">
-        <img  src="img/logo.png">
-    </div>
-
+        
     </section>
 
-    <footer>Copyright &copy; Berg Andrade 2025. </footer>
-    <script src="script.js"></script>
+    <footer>Copyrigth &copy; Berg Andrade 2025.</footer>
+    
+
+    <script src="scriptLogin.js"></script>
+    
 </body>
 </html>
