@@ -31,16 +31,29 @@
             <button class="botoes" onclick="mostrarExercicio(`cross`)">Cross</button>
             <button class="botoes" onclick="calculadora()">Calculadora Fitness</button>
             </p>
+            <div id="timer" class="timer">
+                <h3 style="padding: 10px;">Timer de Descanso</h3>
+ 
+                <label>Tempo (segundos): </label><br>
+                <input type="number" id="inputSegundos" value="30" min="5" style="width: 100px; height: 30px; margin: 5px; text-align: center; border-radius: 10px;"><br>
+                <button onclick="iniciarTimer()">Iniciar</button>
+                <div id="tempo" style="margin: 10px;"><h2>00:30</h2></div>
+        
+            </div>
+            <audio id="somApito">
+                <source src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" type="audio/ogg">
+            </audio>
+
+
         </div>
 
         <div class="galeria" id="galeria"></div>
 
 <!-- Modal escondido -->
     <div id="modal" class="modal" >
-    
+        
     <img  id="modalImg" style="max-width:90%; max-height:90%; border-radius: 10px; user-select: none; -webkit-user-drag: none;">
-    
-    
+     
     </div>
 
     

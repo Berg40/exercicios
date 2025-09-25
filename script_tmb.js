@@ -1,4 +1,18 @@
 
+
+if (sessionStorasge.getItem("logado") !== "true") {
+    window.location.href = "index.html";  /* Redireciona para a página de login se não estiver logado */
+}
+
+
+
+
+
+
+
+
+
+
 function animacao(el) {
     el.classList.add("loading");
     el.innerHTML = "Calculando...";

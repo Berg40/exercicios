@@ -112,6 +112,15 @@ section {
     
 }
 
+.timer {
+    
+    text-align: center;
+    width: 250px;
+    background-color: #6363669a;
+    border-radius: 10px;
+    margin: auto;
+}
+
 
 
 

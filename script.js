@@ -1,3 +1,14 @@
+
+
+if (sessionStorage.getItem("logado") !== "true") {
+    window.location.href = "index.html";  /* Redireciona para a página de login se não estiver logado */
+}
+
+
+
+
+
+
 const exercicios = { 
     ombro: [
         "img/ombro/ARNOLD.gif", 
@@ -441,6 +452,58 @@ function mostrarExercicio(grupo) {
         modal.style.display = "none";
     });
 }
+
+//timer 
+let contador;
+let segundosRestantes;
+let estaContando = false;
+
+function iniciarTimer() {
+    clearInterval(contador); // Limpa qualquer contagem anterior
+    segundosRestantes = parseInt(document.getElementById("inputSegundos").value);
+    atualizarDisplay();
+    estaContando = true;
+    contador = setInterval(() => {
+        segundosRestantes--;
+        const tempoDisplay = document.getElementById("tempo");
+        tempoDisplay.style.fontSize = '48px'; // Aumenta o tamanho da fonte
+        tempoDisplay.style.fontWeight = 'bold'; // Deixa a fonte em negrito
+        
+        tempoDisplay.style.color = segundosRestantes <= 5 ? 'red' : 'green'; // Muda a cor para vermelho nos últimos 5 segundos
+        atualizarDisplay();
+
+        if (segundosRestantes <= 0) {
+            clearInterval(contador);
+            estaContando = false;
+            document.getElementById("somApito").play(); // Toca o som
+            alert("Tempo de descanso encerrado!");
+        }
+    }, 1000);
+}
+function atualizarDisplay() {
+    let min = Math.floor(segundosRestantes / 60);
+    let seg = segundosRestantes % 60;
+    document.getElementById("tempo").textContent = (min < 10 ? '0' : '') + min + ":" + (seg < 10 ? '0' : '') + seg;
+}
+
+// funcao para tocar o som repetidamente por 10s
+function tocarAlarme10s() {
+    let apito = document.getElementById("somApito");
+    let fim = Date.now() + 10000; // 10 segundos a partir de agora
+
+    function tocar() {
+        if (Date.now() < fim) {
+            apito.play();
+            setTimeout(tocar, 1000); // Toca a cada segundo
+        }
+        else {
+            alert("Tempo de descanso encerrado!");
+        }
+    }
+    tocar();
+}
+
+
 // Bloqueia botão direito
     document.addEventListener("contextmenu", function(e) {
         e.preventDefault();
