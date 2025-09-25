@@ -376,10 +376,13 @@ function mostrarExercicio(grupo) {
 
     galeria.innerHTML = ""; // Limpa antes
 
+    
+
     if (exercicios[grupo]) {
         exercicios[grupo].forEach(src => {
             //Cria um container para cada exercicio
             let container = window.document.createElement("div");
+            
             container.style.display = "inline-block";
             container.style.textAlign = "center";
             container.style.margin = "10px";
@@ -393,6 +396,9 @@ function mostrarExercicio(grupo) {
             img.style.margin = "10px";
             img.style.cursor = "pointer";
             img.style.borderRadius = "10px";
+            img.style.boxShadow = "5px 5px 10px #200606f3";
+            img.style.backgroundColor = "black";
+            
 
             // Extrai nome do arquivo (sem pasta e sem .gif)
             let nome = src.split("/").pop().replace(".gif", "");
@@ -415,7 +421,8 @@ function mostrarExercicio(grupo) {
             // Abre no modal Evento clique
             img.addEventListener("click", () => {
                 modal.style.display = "flex";
-           //   modal.style.backgroundColor = "black"; // Fundo escurecido
+                
+            //    modal.style.backgroundColor = "black"; // Fundo escurecido
                 modalImg.src = src;
                 
                 
@@ -434,6 +441,18 @@ function mostrarExercicio(grupo) {
         modal.style.display = "none";
     });
 }
+// Bloqueia botão direito
+    document.addEventListener("contextmenu", function(e) {
+        e.preventDefault();
+        alert("Função desabilitada!");
+    });
+
+    // Bloqueia clique com botão do mouse
+    document.addEventListener("mousedown", function(e) {
+        if (e.button === 2 || e.button === 1) { 
+            e.preventDefault();
+        }
+    });
 
 const botoes = document.querySelectorAll(".botoes"); /* Seleciona todos os botões */
 botoes.forEach(botao => {
@@ -444,3 +463,11 @@ botoes.forEach(botao => {
         botao.classList.add("ativo");
     });
 });
+
+
+function calculadora() {
+    const calculadora = window.document.getElementById("calculadora");
+    
+
+    window.location.href = "caculadora.html";
+}

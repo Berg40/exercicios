@@ -1,0 +1,329 @@
+body {
+    background-color: black;
+    
+
+}
+
+header {
+    display: flex;
+    justify-content: center; /* centraliza na horizontal */
+    align-items: center;     /* centraliza na vertical */
+    gap: 0px; /* Espaçamento entre os elementos */
+    font-size: 18px;
+    margin: 0;
+    padding: 0px;
+    
+}  
+.imgTitulo {
+    width: 80px;
+    height: 80px;
+    animation-name: pulso;  /*Nome da animacao*/
+    animation-duration: 4s;  /*Duração da animacao*/
+    animation-iteration-count: infinite;  /*Repetição infinita*/
+    animation-timing-function: ease-in-out;  /*Efeito de suavização*/
+
+}
+
+
+header h1 {
+    background: linear-gradient(240deg,  #1b37b69c 40%, #b30b0be0 40%,  #1b37b69c 40%, #b30b0be0 80%); /* Gradiente diagonal */
+    -webkit-background-clip: text; /* Aplica o gradiente ao texto */
+    color: transparent; /* Torna o texto transparente para mostrar o gradiente */
+    -webkit-text-fill-color: transparent; /* Compatibilidade com outros navegadores */
+}
+
+section {
+    text-align: center;
+    height: auto;
+    width: auto;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    background: linear-gradient(240deg,  #1b37b69c 40%, #b30b0be0 40%,  #1b37b69c 40%, #b30b0be0 80%); /* Gradiente diagonal */
+    clip-path: polygon(0% 100%, 0 0, 100% 60); /* Forma de triângulo */
+    
+}
+.btn {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #1f0353e7;
+    color: white;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all;
+}
+.btn.loading {
+    background: #1f0353e7;
+    cursor: wait;
+}
+.btn.loading::after {
+    content: " ⏳";
+    display: inline-block;
+    margin-left: 5px;
+    width: 1ch;
+    text-align: left;
+    animation: dots 1s steps(3, end) infinite;
+}
+@keyframes dots {
+    0% { content: " ⏳"; }
+    33% { content: " ⏳."; }
+    66% { content: " ⏳.."; }
+    100% { content: " ⏳..."; }
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    color: whitesmoke;
+    font-size: 8px;
+}
+
+img {
+    padding-top: 10px;
+    padding-left: 10px;
+    width: 150px;
+    height: 150px;
+    border-radius: 30px;
+}
+.dados {
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    background: #e0d9d993;
+    width: auto;
+    border-radius: 10px;
+    border-radius: 10px;
+    
+     background: linear-gradient(240deg,  #1b37b69c 30%, #b30b0be0 30%,  #1b37b69c 30%, #b30b0be0 70%); /* Gradiente diagonal */
+    clip-path: polygon(0% 100%, 0 0, 100% 60); /* Forma de triângulo */
+    
+}
+
+.resposta1 {
+    text-align: center;
+    background: #e4eaf0;
+    width: auto;
+    padding: 20px;
+    margin: 20px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.356);
+    transform: translateY(-3px);
+    /* display: none; */
+}
+
+.resp2 {
+    margin: 20px;
+    background: #e4eaf0;
+    border-radius: 10px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.356);
+    transform: translateY(-3px);
+    
+}
+
+
+.resposta2  {
+    text-align: justify;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: auto;
+    display: flex;
+    gap: 0px 0px;
+      
+}
+.resposta2 p {
+       padding-top: 50px;
+       font-weight: bold;
+       color: black;
+}
+.resposta2 b {
+    font-size: 30px;
+    padding: 0px;
+    margin-right: 0px;
+    
+}
+
+
+
+.item {
+    
+    text-align: center;
+    width: auto;
+    height: 10px;
+    padding: 10px; 
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    margin: auto;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+}
+.item2  {
+    text-align: center;
+    width: auto;
+    padding: 10px; 
+    margin: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}  
+.resposta3  {
+    text-align: justify;
+    margin: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: auto;
+    height: auto;
+    padding-top: 20px;
+    display: flex;
+    gap: 0px 0px;   
+    
+}
+.resposta3 p {
+    margin: auto;
+    margin-left: 5px;
+    margin-right: 20px;
+    padding-left: 0px;
+}
+.resposta3 b {
+    font-size: 30px;
+}
+
+
+.flexP {
+    color: whitesmoke;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    display: grid;
+    gap: 0px 10px;
+
+    
+}
+.flexP h1 {
+    margin-bottom: 0px;
+}
+.flexP p {
+    margin-top: 0px;
+    color: whitesmoke;
+}
+
+.infPai {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    
+} 
+.infPai img {
+    width: 60px;
+    height: 60px;
+}
+
+.infFilho {
+
+    width: 200px;
+    background:#e0d9d993;
+    border-radius: 10px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.356);
+    transform: translateY(-3px);
+}
+
+.importante {
+    color: whitesmoke;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin: 20px;
+    padding-top: 30px;
+}
+
+.perguntas {
+    text-align: center;
+    color: whitesmoke;
+    
+}
+.perguntas1 {
+    text-align: center;
+    color: whitesmoke;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+#hiddenText {
+    display: none;
+}
+#hiddenText.visible {
+    display: block;
+}
+.plus-button {
+    border-radius: 15px;
+}
+
+#hiddenText2 {
+    display: none;
+}
+#hiddenText2.visible {
+    display: block;
+}
+.plus-button2 {
+    border-radius: 15px;
+}
+
+.perguntas p {
+    text-align: justify;
+    padding: 0px 20px 20px 10px;
+}
+
+@keyframes pulso {
+    0% {
+        transform: scale(0.1);
+        
+    }
+    15% {
+        transform: scale(0.35);
+    }
+    30% {
+        transform: scale(0.5);
+    }
+    50% {
+        transform: scale(0.65);
+        
+    }
+    75% {
+        transform: scale(0.8);
+        
+    }
+    100% {
+        transform: scale(1);
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

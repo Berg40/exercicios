@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxa Metabolica Basal</title>
+    <link rel="stylesheet" href="tmb.css">
+</head>
+<body>
+    <header>
+        <img class="imgTitulo" src="img/logo.png">
+        <h1>Calcule seu Gasto Calórico Total</h1>
+        <img class="imgTitulo" src="img/logo.png">
+    </header>
+
+    <section>
+        <div class="dados">
+           <p id="sexo">
+            <b>Sexo:</b>
+            <input type="radio" id="sexo_homem" name="sexo" value="Masculino">
+            <label for="sexo_homem"><b>Homem</b></label>
+            <input type="radio" id="sexo_mulher" name="sexo" value="Feminino">
+            <label for="sexo_mulher"><b>Mulher</b></label>
+            </p>
+
+            <p><b>Idade:</b> <input type="number" id="idade" placeholder="30" style="width: 140px;"></p>
+            <p><b>Peso:</b> <input type="number" id="peso" placeholder="70                         kg" style="width: 140px;"></p>
+            <p><b>Altura:</b> <input type="number" id="altura" placeholder="180                       cm" style="width: 140px;"></p>
+
+            <p><b>Nível de Atividade Física:<br></b> 
+            <select id="nivel"  style="border-radius: 10px; height: 25px; width: 100px;">
+                <option  value="Sedentário (nenhum exercicío)">Sedentário (nenhum exercicío)</option>
+                <option  value="Levemente Ativo (1-2 dias na semana)">Levemente Ativo (1-2 dias na semana)</option>
+                <option  value="Moderadamente ativo (3-5 dias na semana)">Moderadamente ativo (3-5 dias na semana)</option>
+                <option  value="Muito ativo (6-7 dias na semana)">Muito ativo (6-7 dias na semana)</option>
+                <option  value="Super ativo (2x por dia)">Super ativo (2x por dia)</option>
+                
+            </select>
+            </p>
+            <button class="btn" id="button" onclick="processar()">Calcular</button>
+            
+        </div>
+        
+        <div class ="resposta1" id="resposta1"><b>Confira</b></div>
+
+
+        <div class="resp2">
+        <div class="item" id="getTexto"><b>Gasto Energético Total</b></div>
+        <div class="resposta2" id="resposta2"></div>
+        <div class="item2" id="getTexto1"></div>
+        </div>
+
+        <div class="resp2">
+        <div class="item" id="tmbTexto"><b>Taxa metabólica basal</b></div>
+        <div class="resposta2" id="get"></div>
+        <div class="item2" id="tmbTexto1"></div>
+        </div>
+
+        <div class="resp2">
+        <div class="item" id="gseTexto"><b>Gasto semanal de energia</b></div>
+        <div class="resposta3" id="gse"></div>
+        <div class="item2" id="gseTexto1"></div>
+        </div>
+
+        <div class="flexP">
+            <div><h1>Assuma o controle da sua saúde.</h1></div>
+            <div><p>Ao descobrir como seu corpo funciona e o que ele precisa, você pode:</p></div>
+
+        </div>
+
+        <div class="infPai">
+            <div class="infFilho">
+                <img src="img/balance-scale.png" alt="balanca">
+                <h2>Perder peso de<br> forma saudável:</h2>
+                <p>Ajuste sua <br>
+                alimentação e<br>
+                exercicíos de <br>acordo com suas <br>necessidades.</p>
+            </div>
+            <div  class="infFilho">
+                <img src="img/flexed-biceps.png" alt="forca">
+                <h2>Ganhar massa<br>muscular:</h2>
+                <p>Descubra a <br>quantidade ideal de <br>
+                proteínas para<br>alcançar seus <br>objetivos.</p>
+            </div>
+
+        </div>
+
+        <div class="infPai">
+            <div class="infFilho">
+                <img src="img/high-voltage.png" alt="raio">
+                <h2>Aumentar<br>sua<br>energia:</h2>
+                <p>Entenda como seus <br>
+                hábitos de exercicíos influenciam seu<br>
+                gasto de energia<br>ao longo do dia.</p>
+            </div>
+            <div  class="infFilho">
+                <img src="img/person-running.png" alt="run">
+                <h2>Melhorar seu<br>desempenho esportivo:</h2>
+                <p>Planeje sua <br>rotina e<br>
+                otimize seus<br>treinos.</p>
+            </div>
+
+        </div>
+
+        <div class="importante">
+            <p><b>Importante:</b> Esses cálculos são estimativas e podem variar de pessoa para pessoa. Para um acompanhamento mais preciso, é recomendado consultar um profissional de saúde ou nutricionista.</p>
+        </div>
+          
+        <div class="perguntas">
+            
+                <h3>Por que é importante contar as calorias?
+                <button class="plus-button" id="toggleButton">
+                    <span>+</span>
+                </button></h3>
+                <div class="hidden_content" id="hiddenText">
+                   <p>Contar calorias é uma maneira de controlar a quantidade de alimentos que você consome diariamente. Se você deseja perder peso, ganhar massa muscular ou manter o peso atual, é importante saber quantas calorias você está consumindo.</p>          
+            </div>
+            <hr>
+            <div>
+                <h3>Como é composto o Gasto Energético Total (GET)?
+                <button class="plus-button2" id="toggleButton2">
+                    <span>+</span>
+                </button></h3>
+                <div class="hidden_content2" id="hiddenText2">
+                   <p>O Gasto Energético Total (GET) é a quantidade total de energia que o corpo utiliza ao longo do dia para realizar todas as suas funções, incluindo a manutenção das atividades vitais (como respiração e batimento cardíaco) e as atividades físicas. Ele é composto pelo metabolismo basal, que representa a energia necessária para manter as funções essenciais do organismo, pelo efeito térmico dos alimentos, que é a energia utilizada na digestão, e pela atividade física. O GET é importante para ajudar na compreensão do equilíbrio entre a ingestão e o consumo de calorias, sendo um indicador essencial para planejar dietas, programas de emagrecimento ou ganho de peso e melhorar o desempenho físico.</p>          
+            </div>
+        </div>
+            
+    </section>
+
+    <footer>Copyright &copy; 2025 Berg Andrade.</footer>
+
+    <script src="script_tmb.js"></script>
+    
+</body>
+</html>

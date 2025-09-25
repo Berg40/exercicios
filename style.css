@@ -15,6 +15,16 @@ header {
     
 
 }
+.imgTitulo {
+    width: 80px;
+    animation-name: pulso;  /*Nome da animacao*/
+    animation-duration: 4s;  /*Duração da animacao*/
+    animation-iteration-count: infinite;  /*Repetição infinita*/
+    animation-timing-function: ease-in-out;  /*Efeito de suavização*/
+
+}
+
+
 h1 {
     display: flex;
     justify-content: center; /* centraliza na horizontal */
@@ -44,9 +54,10 @@ section {
     padding-left: 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-
+    
     background: linear-gradient(240deg,  #1b37b69c 40%, #b30b0be0 40%,  #1b37b69c 40%, #b30b0be0 80%); /* Gradiente diagonal */
     clip-path: polygon(0% 100%, 0 0, 100% 60); /* Forma de triângulo */
+    
 
 }
 
@@ -56,39 +67,17 @@ section {
     position:fixed;
     top:0; left:0; 
     width:100%; height:100%;
-    background:rgba(0,0,0,0.8);
+    background:rgba(0,0,0,0.8);  
     justify-content:center;
     align-items:center;
     
+    
+    
 }
 
-.logo {
-    display: flex;
-    justify-content: center; /* centraliza na horizontal */
-    align-items: center;     /* centraliza na vertical */
-    margin-bottom: 20px;
-}
-.logo img {
-    display: block;  /* transforma a imagem em bloco */
-    width: 400px;
-    margin: 0 auto;    /* centraliza horizontalmente */
-    object-fit: contain;
-    
-    animation-name: pulso;  /*Nome da animacao*/
-    animation-duration: 4s;  /*Duração da animacao*/
-    animation-iteration-count: infinite;  /*Repetição infinita*/
-    animation-timing-function: ease-in-out;  /*Efeito de suavização*/
-    
-    
-}
 .botoesContainer {
     text-align: center; /* Centraliza o conteúdo horizontalmente */
     margin-bottom: 20px; /* Espaçamento inferior */
-
-
-
-
-
 
 }
 .botoes {
@@ -99,7 +88,7 @@ section {
     margin-top: 10px;
     margin-bottom: 10px; /* Espaçamento inferior */
     color: whitesmoke;
-    border: none; /* Remove a borda padrão */
+ /*   border: none; /* Remove a borda padrão */
     border-radius: 15px; /* Bordas arredondadas */
     background-color: #0412509a; /* Cor de fundo */
     cursor: pointer; /* Muda o cursor ao passar o mouse */
@@ -120,7 +109,9 @@ section {
 
 .galeria {
     text-align: center;
+    
 }
+
 
 
 
