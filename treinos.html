@@ -26,22 +26,23 @@
             <button class="botoes" onclick="mostrarExercicio(`antebraco`)">Antebraço</button>
             <button class="botoes" onclick="mostrarExercicio(`abdominal`)">Abdominal</button>
             <button class="botoes" onclick="mostrarExercicio(`aerobico`)">Aeróbico</button>
-            <button class="botoes" onclick="mostrarExercicio(`alongamneto`)">Alongamento</button>
+            <button class="botoes" onclick="mostrarExercicio(`alongamento`)">Alongamento</button>
             <button class="botoes" onclick="mostrarExercicio(`pilates`)">Pilates</button>
             <button class="botoes" onclick="mostrarExercicio(`cross`)">Cross</button>
             <button class="botoes" onclick="calculadora()">Calculadora Fitness</button>
             </p>
-            <div id="timer" class="timer">
-                <h3 style="padding: 10px;">Timer de Descanso</h3>
+            <div id="timer" class="botoes" style="width: 250px; margin: auto;">
+                <h3 style="padding: 0px;">Timer de Descanso</h3>
  
                 <label>Tempo (segundos): </label><br>
                 <input type="number" id="inputSegundos" value="30" min="5" style="width: 100px; height: 30px; margin: 5px; text-align: center; border-radius: 10px;"><br>
-                <button onclick="iniciarTimer()">Iniciar</button>
-                <div id="tempo" style="margin: 10px;"><h2>00:30</h2></div>
+                
+                <button class="botoes" id="botaoControle" onclick="controleTimer()">Iniciar</button>
+                <div id="tempo" style="margin: 10px;"><h2 style="font-size: 35px; padding: 0px;">00:30</h2></div>
         
             </div>
-            <audio id="somApito">
-                <source src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" type="audio/ogg">
+            <audio id="somApito" loop>
+                <source src="audio/gong-sound2.mp3" type="audio/mp3">
             </audio>
 
 

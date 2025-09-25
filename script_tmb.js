@@ -184,42 +184,6 @@ function processar() {
 }
 
 
-window.document.addEventListener('DOMContentLoaded', function(){
-    const toggleButton = window.document.getElementById('toggleButton');
-    const hiddenText = window.document.getElementById('hiddenText');
-
-    const toggleButton2 = window.document.getElementById('toggleButton2');
-    const hiddenText2 = window.document.getElementById('hiddenText2');
-
-    toggleButton.addEventListener('click', function(){
-        hiddenText.classList.toggle('visible');
-        
-        
-        const plusSpan = toggleButton.querySelector('span');
-        if (hiddenText.classList.contains('visible')) {
-            plusSpan.textContent = '-';
-           
-        }
-        else {
-            plusSpan.textContent = '+';
-            
-        }
-    })
-    toggleButton2.addEventListener('click', function(){
-        hiddenText2.classList.toggle('visible');
-        
-        const plusSpan = toggleButton2.querySelector('span');
-        if (hiddenText2.classList.contains('visible')) {
-            plusSpan.textContent = '-';
-           
-        }
-        else {
-            plusSpan.textContent = '+';
-            
-        }
-    })
-})
-
 function voltar() {
   window.location.href = "treinos.html";
 }

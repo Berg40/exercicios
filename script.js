@@ -378,6 +378,49 @@ const exercicios = {
         "img/cross/STRICT BAR M.gif",
         "img/cross/STRICT MUSCLEUP.gif",
     ],
+    alongamento: [
+        "img/alongamento/ALONGAMENTO1.gif",
+        "img/alongamento/ALONGAMENTO2.gif",
+        "img/alongamento/ALONGAMENTO3.gif",
+        "img/alongamento/ALONGAMENTO4.gif",
+        "img/alongamento/ALONGAMENTO5.gif",
+        "img/alongamento/ALONGAMENTO6.gif",         
+        "img/alongamento/ALONGAMENTO7.gif",
+        "img/alongamento/ALONGAMENTO8.gif",
+        "img/alongamento/ALONGAMENTO9.gif",
+        "img/alongamento/ALONGAMENTO10.gif",
+        "img/alongamento/ALONGAMENTO11.gif",
+        "img/alongamento/ALONGAMENTO12.gif",
+        "img/alongamento/ALONGAMENTO13.gif",
+        "img/alongamento/ALONGAMENTO14.gif",
+        "img/alongamento/ALONGAMENTO15.gif",
+        "img/alongamento/ALONGAMENTO16.gif",
+        "img/alongamento/ALONGAMENTO17.gif",
+        "img/alongamento/ALONGAMENTO18.gif",
+        "img/alongamento/ALONGAMENTO19.gif",
+        "img/alongamento/ALONGAMENTO20.gif",
+        "img/alongamento/ALONGAMENTO21.gif",
+        "img/alongamento/ALONGAMENTO22.gif",
+        "img/alongamento/ALONGAMENTO23.gif",
+        "img/alongamento/ALONGAMENTO24.gif",
+        "img/alongamento/ALONGAMENTO25.gif",
+        "img/alongamento/ALONGAMENTO26.gif",
+        "img/alongamento/ALONGAMENTO27.gif",
+        "img/alongamento/ALONGAMENTO28.gif",
+        "img/alongamento/ALONGAMENTO29.gif",
+        "img/alongamento/ALONGAMENTO30.gif",
+        "img/alongamento/ALONGAMENTO31.gif",
+        "img/alongamento/ALONGAMENTO32.gif",
+        "img/alongamento/ALONGAMENTO33.gif",
+        "img/alongamento/ALONGAMENTO34.gif",
+        "img/alongamento/ALONGAMENTO35.gif",
+        "img/alongamento/ALONGAMENTO36.gif",
+        "img/alongamento/ALONGAMENTO37.gif",
+        "img/alongamento/ALONGAMENTO38.gif",
+        "img/alongamento/ALONGAMENTO39.gif",
+        "img/alongamento/ALONGAMENTO40.gif",
+
+    ],
 };
 
 function mostrarExercicio(grupo) {
@@ -454,19 +497,38 @@ function mostrarExercicio(grupo) {
 }
 
 //timer 
-let contador;
-let segundosRestantes;
-let estaContando = false;
+let contador = null;
+let segundosRestantes = 0;
+let estado = "parar";
+
+function controleTimer() {
+    if (estado === "parar") {
+        iniciarTimer();
+    }
+    else if 
+        (estado === "rodando") {
+            pausarTimer();
+        }
+    else if (estado === "alarme") {
+        pararAlarme();
+    }
+}
 
 function iniciarTimer() {
     clearInterval(contador); // Limpa qualquer contagem anterior
+    
+    if (estado === "parar")
+
     segundosRestantes = parseInt(document.getElementById("inputSegundos").value);
     atualizarDisplay();
-    estaContando = true;
+
+window.document.getElementById("botaoControle").textContent = "Pause";
+estado = "rodando";    
+
     contador = setInterval(() => {
         segundosRestantes--;
         const tempoDisplay = document.getElementById("tempo");
-        tempoDisplay.style.fontSize = '48px'; // Aumenta o tamanho da fonte
+        tempoDisplay.style.fontSize = '35px'; // Aumenta o tamanho da fonte
         tempoDisplay.style.fontWeight = 'bold'; // Deixa a fonte em negrito
         
         tempoDisplay.style.color = segundosRestantes <= 5 ? 'red' : 'green'; // Muda a cor para vermelho nos últimos 5 segundos
@@ -475,33 +537,47 @@ function iniciarTimer() {
         if (segundosRestantes <= 0) {
             clearInterval(contador);
             estaContando = false;
-            document.getElementById("somApito").play(); // Toca o som
-            alert("Tempo de descanso encerrado!");
+            tocarAlarme()
         }
     }, 1000);
 }
+
+function pausarTimer() {
+    clearInterval(contador);
+    window.document.getElementById("botaoControle").textContent = "Iniciar";
+    estado = "parar";
+}
+
+
 function atualizarDisplay() {
     let min = Math.floor(segundosRestantes / 60);
     let seg = segundosRestantes % 60;
-    document.getElementById("tempo").textContent = (min < 10 ? '0' : '') + min + ":" + (seg < 10 ? '0' : '') + seg;
+    document.getElementById("tempo").textContent = (min < 10 ? "0" : "") + min + ":" + (seg < 10 ? "0" : "") + seg;
 }
 
 // funcao para tocar o som repetidamente por 10s
-function tocarAlarme10s() {
+function tocarAlarme() {
     let apito = document.getElementById("somApito");
-    let fim = Date.now() + 10000; // 10 segundos a partir de agora
+    apito.currentTime = 0;
+    apito.play();
 
-    function tocar() {
-        if (Date.now() < fim) {
-            apito.play();
-            setTimeout(tocar, 1000); // Toca a cada segundo
-        }
-        else {
-            alert("Tempo de descanso encerrado!");
-        }
-    }
-    tocar();
+window.document.getElementById("botaoControle").textContent = "Parar Alarme";
+estado = "alarme";
 }
+
+    function pararAlarme() {
+        let apito = window.document.getElementById("somApito");
+        apito.pause();
+        apito.currentTime = 0;  // volta para o inicio do audio
+
+window.document.getElementById("botaoControle").textContent = "Iniciar";
+estado = "parar";  // aqui garante que o 
+}
+
+
+    
+    
+
 
 
 // Bloqueia botão direito
