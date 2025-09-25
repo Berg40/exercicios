@@ -8,7 +8,7 @@ header {
     display: flex;
     justify-content: center; /* centraliza na horizontal */
     align-items: center;     /* centraliza na vertical */
-    gap: 0px; /* Espaçamento entre os elementos */
+    gap: 10px; /* Espaçamento entre os elementos */
     font-size: 18px;
     margin: 0;
     padding: 0px;
@@ -51,8 +51,12 @@ section {
     width: 200px;
     height: 30px;
     border-radius: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 10px;
     cursor: pointer;
     transition: all;
 }
@@ -105,7 +109,7 @@ img {
 
 .resposta1 {
     text-align: center;
-    background: #e4eaf0;
+    background: #e4eaf0; 
     width: auto;
     padding: 20px;
     margin: 20px;
@@ -124,6 +128,8 @@ img {
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.356);
     transform: translateY(-3px);
     
+    
+    
 }
 
 
@@ -131,6 +137,7 @@ img {
     text-align: justify;
     margin-left: 20px;
     margin-right: 20px;
+    margin-top: 50px;
     width: auto;
     display: flex;
     gap: 0px 0px;
@@ -179,6 +186,7 @@ img {
     margin: auto;
     margin-left: 20px;
     margin-right: 20px;
+    margin-top: 50px;
     width: auto;
     height: auto;
     padding-top: 20px;

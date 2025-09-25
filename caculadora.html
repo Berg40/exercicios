@@ -9,7 +9,7 @@
 <body>
     <header>
         <img class="imgTitulo" src="img/logo.png">
-        <h1>Calcule seu Gasto Calórico Total</h1>
+        <h1>Gasto Calórico </h1>
         <img class="imgTitulo" src="img/logo.png">
     </header>
 
@@ -38,26 +38,27 @@
             </select>
             </p>
             <button class="btn" id="button" onclick="processar()">Calcular</button>
+            <button class="btn" id="voltar" onclick="voltar()" style="width: 80px;">Voltar</button>
             
         </div>
         
-        <div class ="resposta1" id="resposta1"><b>Confira</b></div>
+        <div class ="resposta1" id="resposta1"><h2>Confira</h2></div>
 
 
         <div class="resp2">
-        <div class="item" id="getTexto"><b>Gasto Energético Total</b></div>
+        <div class="item" id="getTexto"><h2 style="margin: 23px;">Gasto Energético Total</h2></div>
         <div class="resposta2" id="resposta2"></div>
         <div class="item2" id="getTexto1"></div>
         </div>
 
         <div class="resp2">
-        <div class="item" id="tmbTexto"><b>Taxa metabólica basal</b></div>
+        <div class="item" id="tmbTexto"><h2 style="margin: 23px;">Taxa metabólica basal</h2></div>
         <div class="resposta2" id="get"></div>
         <div class="item2" id="tmbTexto1"></div>
         </div>
 
         <div class="resp2">
-        <div class="item" id="gseTexto"><b>Gasto semanal de energia</b></div>
+        <div class="item" id="gseTexto"><h2 style="margin: 33px;">Gasto semanal de energia</h2></div>
         <div class="resposta3" id="gse"></div>
         <div class="item2" id="gseTexto1"></div>
         </div>
@@ -105,10 +106,10 @@
         <div class="importante">
             <p><b>Importante:</b> Esses cálculos são estimativas e podem variar de pessoa para pessoa. Para um acompanhamento mais preciso, é recomendado consultar um profissional de saúde ou nutricionista.</p>
         </div>
-          
+          <hr>
         <div class="perguntas">
             
-                <h3>Por que é importante contar as calorias?
+                <h3 style="padding: 20px;">Por que é importante contar as calorias?
                 <button class="plus-button" id="toggleButton">
                     <span>+</span>
                 </button></h3>
@@ -117,7 +118,7 @@
             </div>
             <hr>
             <div>
-                <h3>Como é composto o Gasto Energético Total (GET)?
+                <h3 style="padding: 20px;">Como é composto o Gasto Energético Total (GET)?
                 <button class="plus-button2" id="toggleButton2">
                     <span>+</span>
                 </button></h3>

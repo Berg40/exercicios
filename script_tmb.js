@@ -206,6 +206,10 @@ window.document.addEventListener('DOMContentLoaded', function(){
     })
 })
 
+function voltar() {
+  window.location.href = "treinos.html";
+}
+
 
 
 
